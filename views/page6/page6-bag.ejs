@@ -1,0 +1,34 @@
+<html>
+    
+    <%- include('../partials/head.ejs') %>
+
+    <body class="bag">
+
+        <%- include('../partials/nav.ejs') %>
+        <h1> Title : <%= title %> </h1>
+
+        <% if(orders.length > 0 ) { %>
+
+            <% orders.forEach(blog => { %>
+            
+                <h4>order title : order.title </h4>
+                <h6>order body : order.snippet </h6>
+
+            <% }) %>
+
+        <% } else{ %>
+            
+            <!-- Display Empty Bag -->
+            <div class="empty_cont">
+            
+                <img src="https://constant.myntassets.com/checkout/assets/img/empty-bag.webp">
+                <div class="heading-3">There is nothing in your bag. Let's add some items.</div>
+                <button class="button">ADD ITEMS FROM WISHLIST</button>
+
+            </div>
+
+        <% } %>
+
+    </body>
+
+</html>

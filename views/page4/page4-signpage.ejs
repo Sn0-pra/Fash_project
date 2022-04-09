@@ -1,0 +1,28 @@
+<html>
+    
+    <%- include('../partials/head.ejs') %>
+
+    <body onload="signInfunc()">
+        <%- include('../partials/nav.ejs') %>
+        <h1> Title : <%= title %> </h1>
+
+        <div class="empty_cont" id="sign_block">
+
+        </div>
+
+
+        <!-- <div class="empty_cont">
+            
+            <h3>Sign out form</h3><br><br>
+            <form action="#">
+                <button onclick="signOut()" class="button">Sign Out</button>
+            </form>
+        
+        </div> -->
+        
+    <script src="/public/scripts/firebase.js"></script>
+    <script src="/public/scripts/scripts.js"></script>
+
+    </body>
+
+</html>

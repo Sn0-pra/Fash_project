@@ -1,0 +1,45 @@
+<html>
+    
+    <%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/nav.ejs') %>
+        <h1> Title : <%= title %> </h1>
+
+        <!-- <%- include('./page2-ContentBlock.ejs') %> -->
+    
+
+        <% if(products.length > 0 ) { %>
+
+            <% products.forEach(product => { %>
+
+                <h3>product.title</h3>
+                <h3>product.snippet</h3>
+
+            <% }) %>
+
+        <% } else{ %>
+            <h4>No items to display </h4>
+        <% } %>
+
+        <!-- <div class="card">
+                    
+            <div class="card-header">
+                <img src=item.image>
+            </div>
+
+            <div class="card-body">
+                <button class="material-icons icon" title="Wishlist">favorite</button>
+                <div class="comp">product.name</div>
+                <div class="descr">product.desc</div>
+                <div class="price">product.price</div>
+            </div>
+            
+            <div class="card-footer"><button type="button" class="btn btn-light _button">Add to Bag</button></div> -->
+        
+        <!-- </div> -->
+
+    </body>
+
+</html>

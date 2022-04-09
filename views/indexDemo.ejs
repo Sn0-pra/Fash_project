@@ -1,0 +1,28 @@
+<html>
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <h1> Title : <%= title %> </h1>
+        <%- include('./partials/nav.ejs') %>
+        <h1>Index Page Start</h1>
+        <h6>Index Page Content Here</h6>
+
+        <div class="blog-box">
+
+            <h1>Blogs</h1>
+
+            <% if(blogs.length > 0 ) { %>
+
+                <% blogs.forEach(blog => { %>
+                
+                    <h4>blog title : blog.title </h4>
+                    <h6>blog body : blog.snippet </h6>
+
+                <% }) %>
+
+            <% } else{ %>
+                <h4>No blogs to display </h4>
+            <% } %>
+
+        </div>
+    </body>
+</html>
